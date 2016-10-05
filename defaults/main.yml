@@ -1,0 +1,8 @@
+---
+# defaults file for ucsdlib.fedora-commons
+
+fedora_commons_version: 4.6.0
+fedora_commons_install: /opt
+fedora_commons_webproxy: {}
+#  http_proxy: http://webproxy:3128/'
+# If you use this, rememer to remove the {}

@@ -8,7 +8,6 @@
     owner: root
     group: root
     mode: 0755
-  become: true
 
 - name: Download Fedora Commons
   get_url:
@@ -17,12 +16,10 @@
     dest: '{{ fedora_commons_install }}/fcrepo-{{ fedora_commons_version }}/fcrepo-webapp-{{ fedora_commons_version }}-jetty-console.jar'
   environment:
     '{{ fedora_commons_webproxy | default ({}) }}'
-  become: true
 
 - name: Set Default Symlink
   file:
     path: '{{ fedora_commons_install }}/fedora-commons'
     src: 'fcrepo-{{ fedora_commons_version }}'
     state: link
-  become: true
   ignore_errors: '{{ ansible_check_mode }}'

@@ -23,7 +23,7 @@ install:
 
 script:
   # make it look like the dependent role is installed (this is a hack)
-  - mkdir ../ucsdlib.epel
+  - mkdir ../ucsdlib.java
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
 
